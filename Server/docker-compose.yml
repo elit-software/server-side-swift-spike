@@ -1,0 +1,7 @@
+app:
+  image: ibmcom/swift-ubuntu
+  ports:
+    - "8090:8090"
+  volumes:
+    - .:/root/Kitura-Starter
+  command: bash -c "make clean -C Kitura-Starter && make -C Kitura-Starter && Kitura-Starter/.build/debug/Kitura-Starter"
